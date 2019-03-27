@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  namespace: example-namespace
+spec:
+  containers:
+  - name: app
+    image: localhost:5000/kubernetes101.app
+    env:
+    - name: PORT
+      value: "80"
+    ports:
+    - containerPort: 80
